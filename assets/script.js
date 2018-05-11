@@ -38,3 +38,18 @@ $( "input" ).click(function( event ) {
     $('#monkey').removeClass('hidden')
   }
 });
+
+var audio = [];
+var isMuted = audio.muted
+
+audio[0] = new Audio();
+audio[0].src = 'assets/title.mp3';
+audio[1] = new Audio();
+audio[1].src = 'assets/select.wav';
+setTimeout(function(){
+audio[0].play();
+}, 500)
+
+$( "input" ).click(function() {
+  audio[1].play();
+});
